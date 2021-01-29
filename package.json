@@ -1,0 +1,33 @@
+{
+  "name": "@wwenv/eslint-config",
+  "version": "0.0.1",
+  "description": "Web Working Environment ESLint config",
+  "main": "eslint-config.js",
+  "scripts": {},
+  "author": {
+    "name": "Peter Müller",
+    "email": "peter@crycode.de",
+    "url": "https://crycode.de"
+  },
+  "license": "CC-BY-NC-SA-4.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wwenv/wwenv.eslint-config.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "wwenv"
+  ],
+  "files": [
+    "eslint-config.js",
+    "*.md"
+  ],
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1"
+  },
+  "peerDependencies": {
+    "eslint": "^7.0.0"
+  }
+}
