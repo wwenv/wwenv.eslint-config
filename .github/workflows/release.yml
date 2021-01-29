@@ -1,4 +1,4 @@
-name: Test and Release
+name: Release
 
 on:
     push:
@@ -46,7 +46,7 @@ jobs:
             - name: Publish package to npm
               run: |
                   npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
-                  npm publish
+                  npm publish --access public
 
             - name: Create Github Release
               uses: actions/create-release@v1
