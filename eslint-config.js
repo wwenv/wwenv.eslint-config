@@ -4,7 +4,8 @@
 /***/
 
 module.exports = {
-  parser: '@typescript-eslint/parser', // Specifies the ESLint parser
+  parser: '@typescript-eslint/parser',
+
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
@@ -12,10 +13,18 @@ module.exports = {
       './tsconfig.json'
     ],
   },
+
   extends: [
-    'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+    'plugin:@typescript-eslint/recommended',
   ],
+
   plugins: [],
+
+  ignorePatterns: [
+    '/dist/*',
+    '/*.js', // ignore js files in the root directory because they are not part of the typescript rootDir
+  ],
+
   rules: {
     'indent': 'off',
     '@typescript-eslint/indent': [
@@ -72,5 +81,21 @@ module.exports = {
     'no-var': 'error',
     'prefer-const': 'error',
     'no-trailing-spaces': 'warn',
+
+    // require a comma at the end ob multiline arrays, objects, imports, ...
+    'comma-dangle': 'off',
+    '@typescript-eslint/comma-dangle': [
+      'warn',
+      {
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        imports: 'always-multiline',
+        exports: 'always-multiline',
+        functions: 'always-multiline',
+        enums: 'always-multiline',
+        generics: 'always-multiline',
+        tuples: 'always-multiline'
+      },
+    ],
   }
 };
