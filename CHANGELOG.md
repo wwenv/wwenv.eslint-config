@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.1.0
+
+- Fine tuned and finalized all rules
+- Added overrides for specific code parts
+
 ## v0.0.3
 
 - Require a comma at the end ob multiline arrays, objects, imports, ...
