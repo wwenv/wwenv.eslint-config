@@ -392,6 +392,15 @@ module.exports = {
     '@typescript-eslint/unified-signatures': 'warn',
 
     'yoda': 'warn',
+
+    // restrict some modules from being used
+    'no-restricted-imports': [
+      'error',
+      {
+        paths: ['moment'],
+        patterns: [],
+      },
+    ],
   },
 
   overrides: [

@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.1.1
+
+- Restrict usage of moment.js
+
 ## v0.1.0
 
 - Fine tuned and finalized all rules
